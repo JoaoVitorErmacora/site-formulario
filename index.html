@@ -12,62 +12,75 @@
     <script src="./scripts/scripts.js" defer></script>
   </head>
   <body>
+    <!-- Contêiner para animação de chuva -->
     <div class="container_rain">
       <span class="cloud"></span>
       <span class="cloud"></span>
       <span class="cloud"></span>
     </div>
+
     <section class="container">
+      <!-- Seção da imagem com texto promocional -->
       <div class="image_container">
         <h1>Crie sua conta</h1>
         <p>
           Compartilhe suas novas aventuras e <br />
-          descubras novos lugares ao redor do mundo!
+          descubra novos lugares ao redor do mundo!
         </p>
       </div>
 
+      <!-- Formulário de cadastro -->
       <form id="cadastroForm">
         <div class="title">
           <h1>Cadastre-se</h1>
           <p>Preencha os campos abaixo e torne-se parte da nossa comunidade.</p>
         </div>
 
+        <!-- Campo para o nome do usuário -->
         <div class="input_data">
           <input type="text" name="nome" id="nome" required />
-          <label for="">Nome</label>
+          <label for="nome">Nome</label>
         </div>
 
+        <!-- Campo para o e-mail -->
         <div class="input_data">
           <input type="email" name="email" id="email" required />
-          <label for="">Email</label>
+          <label for="email">Email</label>
         </div>
+
+        <!-- Campo para o telefone/celular -->
         <div class="input_data">
           <input type="tel" name="celular" id="celular" required />
           <label for="celular">Telefone</label>
           <span id="error-message" class="error"></span>
-          <!-- Adicionando a área para exibir o erro -->
+          <!-- Área para exibir mensagens de erro -->
         </div>
 
+        <!-- Campo para a senha -->
         <div class="input_data">
           <input type="password" name="senha" id="senha" required />
-          <label for="">Senha</label>
+          <label for="senha">Senha</label>
         </div>
 
+        <!-- Campo para confirmação da senha -->
         <div class="input_data">
           <input type="password" name="confirm" id="confirm" required />
-          <label for="">Connfirme sua senha</label>
+          <label for="confirm">Confirme sua senha</label>
         </div>
 
+        <!-- Campo para CPF -->
         <div class="input_data">
           <input type="text" name="cpf" id="cpf" required />
-          <label for=""> CPF</label>
+          <label for="cpf">CPF</label>
         </div>
 
+        <!-- Campo para RG -->
         <div class="input_data">
           <input type="text" name="rg" id="rg" required />
-          <label for="">RG</label>
+          <label for="rg">RG</label>
         </div>
 
+        <!-- Botão de envio do formulário -->
         <div class="btnArea">
           <p class="msgError"></p>
           <button id="btnSubmit" type="submit">Enviar</button>

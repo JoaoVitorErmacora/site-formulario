@@ -1,3 +1,4 @@
+/* Importando fontes personalizadas */
 @font-face {
   font-family: "Copperplate";
   src: url("../fonts/Copperplate.otf");
@@ -8,12 +9,14 @@
   src: url("../fonts/JosefinSans.ttf");
 }
 
+/* Resetando estilos padrão */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Estilização do corpo da página */
 body {
   height: 100vh;
   background-color: #000000;
@@ -23,6 +26,7 @@ body {
   align-items: center;
 }
 
+/* Contêiner para animação de chuva */
 .container_rain {
   position: absolute;
   top: 0;
@@ -32,6 +36,7 @@ body {
   background-color: transparent;
 }
 
+/* Estilização das nuvens */
 .cloud {
   position: absolute;
   width: 250px;
@@ -40,6 +45,7 @@ body {
   filter: drop-shadow(2px 2px 20px #e3eed4);
 }
 
+/* Posicionamento das nuvens individuais */
 .cloud:nth-child(1) {
   top: 2.5%;
   left: 5%;
@@ -57,6 +63,7 @@ body {
   left: 5%;
 }
 
+/* Estilização da animação da chuva */
 .rain {
   background-color: #e3eed4;
   width: 5px;
@@ -67,11 +74,11 @@ body {
   z-index: 1000;
   position: absolute;
   top: 90px;
-
   transform-origin: bottom;
   animation: animate 2s linear infinite;
 }
 
+/* Animação da queda de chuva */
 @keyframes animate {
   0% {
     transform: translateY(0) scaleY(1);
@@ -94,6 +101,7 @@ body {
   }
 }
 
+/* Contêiner principal da interface */
 .container {
   width: 80%;
   height: 80%;
@@ -110,11 +118,12 @@ body {
   overflow: hidden;
 }
 
+/* Contêiner da imagem lateral */
 .image_container {
   width: 100%;
   height: 100%;
   background: url("../images/download.jpg") center / cover no-repeat;
-  border-radius: 0 30px 30 px 0;
+  border-radius: 0 30px 30px 0;
   padding-left: 10%;
   position: relative;
   overflow: hidden;
@@ -124,6 +133,7 @@ body {
   justify-content: center;
 }
 
+/* Sobreposição escura para melhorar a legibilidade do texto */
 .image_container::before {
   content: "";
   position: absolute;
@@ -135,6 +145,7 @@ body {
   z-index: 1;
 }
 
+/* Estilização dos textos dentro do contêiner de imagem */
 .image_container h1,
 .image_container p {
   position: relative;
@@ -152,6 +163,7 @@ body {
   font-size: 13px;
 }
 
+/* Estilização do formulário */
 #cadastroForm {
   width: 80%;
   height: 90%;
@@ -162,6 +174,7 @@ body {
   gap: 20px;
 }
 
+/* Título do formulário */
 #cadastroForm h1 {
   font-family: "JoseFins";
   font-size: 2em;
@@ -169,6 +182,7 @@ body {
   color: #0f2a1d;
 }
 
+/* Parágrafo do formulário */
 #cadastroForm p {
   font-family: "Copperplate";
   font-size: 11px;
@@ -176,15 +190,16 @@ body {
   color: #0f2a1d;
 }
 
+/* Contêiner para os campos de entrada */
 #cadastroForm .input_data {
   position: relative;
   width: calc(50% - 15px);
-
   display: flex;
   flex-direction: column;
   color: #0f2a1d;
 }
 
+/* Estilização dos campos de entrada */
 #cadastroForm .input_data input {
   position: relative;
   z-index: 2;
@@ -201,6 +216,7 @@ body {
   color: #0f2a1d;
 }
 
+/* Estilização dos rótulos dos campos */
 #cadastroForm .input_data label {
   position: absolute;
   font-family: "Copperplate";
@@ -213,16 +229,19 @@ body {
   color: #0f2a1d;
 }
 
+/* Animação do rótulo ao digitar no campo */
 #cadastroForm .input_data input:focus + label,
 #cadastroForm .input_data input:valid + label {
   top: -10%;
   left: 0;
 }
 
+/* Área do botão de envio */
 #cadastroForm .btnArea {
   width: 100%;
 }
 
+/* Mensagem de erro */
 #cadastroForm .btnArea .msgError {
   margin-bottom: 10px;
   height: 25px;
@@ -230,6 +249,7 @@ body {
   font-style: italic;
 }
 
+/* Estilização do botão de envio */
 #cadastroForm .btnArea button {
   font-family: "Copperplate";
   border: 1px solid #0f2a1d;
@@ -242,26 +262,17 @@ body {
   letter-spacing: 1.5px;
 }
 
+/* Efeito de hover no botão */
 #cadastroForm .btnArea button:hover {
   background-color: transparent;
   border: 1px solid #0f2a1d;
   color: #0f2a1d;
 }
 
-#cadastroForm .btn .msgError {
-  margin-bottom: 10px;
-  height: 25px;
-  color: #ff00000;
-  font-style: italic;
-}
-
+/* Ajustes responsivos para telas menores */
 @media only screen and (max-width: 1200px) {
-  /* body {
-    background-color: purple;
-  } */
   .container {
     grid-template-columns: 1fr;
-    grid-template-columns: ;
   }
   #cadastroForm .btnArea button {
     padding: 0 0 0 0;
